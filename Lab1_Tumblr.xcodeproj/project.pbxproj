@@ -10,8 +10,9 @@
 		4AD77E80F17D1B51E9E01721 /* Pods_Lab1_TumblrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082190CBD1DF20C844CAE0B2 /* Pods_Lab1_TumblrTests.framework */; };
 		52163DB0DAC04FD000FBFA41 /* Pods_Lab1_Tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD8FC4DE473C6276ECFD150 /* Pods_Lab1_Tumblr.framework */; };
 		59F7F2110799421A248A5CEC /* Pods_Lab1_TumblrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637B54778E76838F3AE16C4 /* Pods_Lab1_TumblrUITests.framework */; };
+		C50965CC21656C3A0008F395 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50965CB21656C3A0008F395 /* PhotosViewController.swift */; };
+		C50965D02165742A0008F395 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50965CF2165742A0008F395 /* PhotoCell.swift */; };
 		C5729CF221651F1600048ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5729CF121651F1600048ED3 /* AppDelegate.swift */; };
-		C5729CF421651F1600048ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5729CF321651F1600048ED3 /* ViewController.swift */; };
 		C5729CF721651F1600048ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5729CF521651F1600048ED3 /* Main.storyboard */; };
 		C5729CF921651F1700048ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5729CF821651F1700048ED3 /* Assets.xcassets */; };
 		C5729CFC21651F1700048ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5729CFA21651F1700048ED3 /* LaunchScreen.storyboard */; };
@@ -43,9 +44,10 @@
 		43EEBE32399BEF52B426BCB1 /* Pods-Lab1_TumblrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab1_TumblrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab1_TumblrTests/Pods-Lab1_TumblrTests.release.xcconfig"; sourceTree = "<group>"; };
 		50E3C557BE154BF217729862 /* Pods-Lab1_Tumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab1_Tumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab1_Tumblr/Pods-Lab1_Tumblr.release.xcconfig"; sourceTree = "<group>"; };
 		6637B54778E76838F3AE16C4 /* Pods_Lab1_TumblrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab1_TumblrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C50965CB21656C3A0008F395 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		C50965CF2165742A0008F395 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C5729CEE21651F1600048ED3 /* Lab1_Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1_Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5729CF121651F1600048ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C5729CF321651F1600048ED3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C5729CF621651F1600048ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5729CF821651F1700048ED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5729CFB21651F1700048ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,12 +126,13 @@
 		C5729CF021651F1600048ED3 /* Lab1_Tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				C50965CB21656C3A0008F395 /* PhotosViewController.swift */,
 				C5729CF121651F1600048ED3 /* AppDelegate.swift */,
-				C5729CF321651F1600048ED3 /* ViewController.swift */,
 				C5729CF521651F1600048ED3 /* Main.storyboard */,
 				C5729CF821651F1700048ED3 /* Assets.xcassets */,
 				C5729CFA21651F1700048ED3 /* LaunchScreen.storyboard */,
 				C5729CFD21651F1700048ED3 /* Info.plist */,
+				C50965CF2165742A0008F395 /* PhotoCell.swift */,
 			);
 			path = Lab1_Tumblr;
 			sourceTree = "<group>";
@@ -301,15 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Lab1_TumblrUITests-checkManifestLockResult.txt",
 			);
@@ -323,15 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Lab1_TumblrTests-checkManifestLockResult.txt",
 			);
@@ -345,15 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Lab1_Tumblr-checkManifestLockResult.txt",
 			);
@@ -367,16 +358,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lab1_Tumblr/Pods-Lab1_Tumblr-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
@@ -393,8 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5729CF421651F1600048ED3 /* ViewController.swift in Sources */,
 				C5729CF221651F1600048ED3 /* AppDelegate.swift in Sources */,
+				C50965D02165742A0008F395 /* PhotoCell.swift in Sources */,
+				C50965CC21656C3A0008F395 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
